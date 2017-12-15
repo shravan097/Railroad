@@ -1,25 +1,18 @@
 import java.util.List;
 
+import javax.swing.JFrame;
+
 public class Main {
 
     public static void main(String[] args) {
 
 
         // TESTING
-        testConnection test = new testConnection();
-
-//        StationQuery myQuery = new StationQuery();
-//        List<Station> result = myQuery.getAllStation() ;
-//
-//        System.out.println(
-//                String.format("%s%20s%20s","Station_ID","Station_Name","Station_Symbol")
-//        );
-//        for( Station station: result )
-//        {
-//            String.format("%s%20s%20s",station.getStation_id(),station.getStation_name(),station.getStation_symbol());
-//        }
-
-
-
+        
+    			testConnection test = new testConnection();
+    		     GUI tp = new GUI();
+    		        tp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    		        tp.setVisible(true);
     }
+       
 }
