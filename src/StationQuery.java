@@ -11,6 +11,7 @@ public class StationQuery {
 
     private Connection connection;
     private PreparedStatement selectAllStation;
+    private PreparedStatement getStationSymbol;
 
 
 
@@ -22,13 +23,34 @@ public class StationQuery {
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
 
             selectAllStation =  connection.prepareStatement("SELECT * FROM stations");
+            getStationSymbol = connection.prepareStatement("Select station_symbol FROM stations WHERE station_name = ?");
         }
         catch (SQLException sqlException)
         {
-		System.out.println("Error! Connection cannot be established");
+            System.out.println("Error! Connection cannot be established");
             sqlException.printStackTrace();;
             System.exit(1);
         }
+    }
+
+    public String get_station_symbol(String station_name)
+    {
+        String result = null;
+        try
+        {
+            ResultSet resultSet = null;
+
+            getStationSymbol.setString(1,station_name);
+            resultSet= getStationSymbol.executeQuery();
+            while(resultSet.next())
+                result = resultSet.getString("station_symbol");
+
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return result;
     }
 
     public List<Station> getAllStation()
