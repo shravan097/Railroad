@@ -1,9 +1,5 @@
-import javax.swing.JPanel;
-import javax.swing.JComboBox;
-import javax.swing.JButton;
-import javax.swing.JList;
-import javax.swing.JLabel;
-
+import javax.swing.*;
+import java.util.List;
 
 
 public class FindTrainUI extends JPanel {
@@ -16,27 +12,30 @@ public class FindTrainUI extends JPanel {
 		
 		JComboBox setOrigin = new JComboBox();
 		setOrigin.setBounds(19, 34, 207, 27);
+
+
+		StationQuery station_query = new StationQuery();
+		List<Station> allStation = station_query.getAllStation();
+		for (Station i : allStation)
+			setOrigin.addItem(i.getStation_name());
 		add(setOrigin);
+
+
+
 		
 		JComboBox setDestination = new JComboBox();
 		setDestination.setBounds(19, 84, 207, 27);
+		for (Station i : allStation)
+			setDestination.addItem(i.getStation_name());
 		add(setDestination);
-		
+
+		// Travel Up to 10 People
 		JComboBox setTravelers = new JComboBox();
 		setTravelers.setBounds(19, 136, 133, 27);
+		for( int i = 1; i< 11; ++i)
+			setTravelers.addItem(i);
 		add(setTravelers);
-		
-		JComboBox setMonth = new JComboBox();
-		setMonth.setBounds(19, 185, 64, 27);
-		add(setMonth);
-		
-		JComboBox setDay = new JComboBox();
-		setDay.setBounds(95, 185, 64, 27);
-		add(setDay);
-		
-		JComboBox setYear = new JComboBox();
-		setYear.setBounds(171, 185, 55, 27);
-		add(setYear);
+
 		
 		JButton btnSearch = new JButton("Search");
 		btnSearch.setBounds(19, 230, 207, 29);
@@ -54,9 +53,15 @@ public class FindTrainUI extends JPanel {
 		lblSelectTravelers.setBounds(22, 118, 204, 16);
 		add(lblSelectTravelers);
 		
-		JLabel lblMm = new JLabel("Select Travel Date");
-		lblMm.setBounds(22, 168, 204, 16);
-		add(lblMm);
+
+
+		JLabel lblSelectDate = new JLabel("Enter Date (YYYY-MM-DD)");
+		lblSelectDate.setBounds(22, 168, 204, 16);
+		add(lblSelectDate);
+		JTextField date = new JTextField(10);
+		date.setBounds(20,185,134,26);
+		add(date);
+
 		
 		JList avail_trains = new JList();
 		avail_trains.setBounds(248, 38, 232, 166);

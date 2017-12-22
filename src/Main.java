@@ -6,8 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
 		ReservationQuery reservation = new ReservationQuery();
-		reservation.make_reservation("Johnathon","Smith",9,"Visa",
-				"4880090989788876","425 Hollywood Blvd Los Angeles,CA");
 
 		List<Reservation>  result = reservation.getAllReservation();
 		for( Reservation i: result)
@@ -16,7 +14,7 @@ public class Main {
         // TESTING
 //
 //    			testConnection test = new testConnection();
-    		     GUI tp = new GUI();
+    		     	MainGUI tp = new MainGUI();
     		        tp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     		        tp.setVisible(true);
     }
