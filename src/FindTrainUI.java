@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 
@@ -36,10 +38,11 @@ public class FindTrainUI extends JPanel {
 			setTravelers.addItem(i);
 		add(setTravelers);
 
-		
+		TrainQuery trainQuery = new TrainQuery();
+		DefaultListModel<String> allStationModel= new DefaultListModel();
 		JButton btnSearch = new JButton("Search");
 		btnSearch.setBounds(19, 230, 207, 29);
-		add(btnSearch);
+
 		
 		JLabel lblNewLabel = new JLabel("Select Origin Station");
 		lblNewLabel.setBounds(22, 17, 204, 16);
@@ -62,8 +65,9 @@ public class FindTrainUI extends JPanel {
 		date.setBounds(20,185,134,26);
 		add(date);
 
-		
-		JList avail_trains = new JList();
+
+
+		JList avail_trains = new JList(allStationModel);
 		avail_trains.setBounds(248, 38, 232, 166);
 		add(avail_trains);
 		
@@ -78,6 +82,33 @@ public class FindTrainUI extends JPanel {
 		JButton btnClear = new JButton("Make Selection");
 		btnClear.setBounds(258, 216, 207, 29);
 		add(btnClear);
+
+
+
+		//Search Button Handler
+		btnSearch.addActionListener(
+				new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						List<Train> avail_train = trainQuery.getAllTrain(
+								date.getText(),station_query.get_station_symbol((String)setOrigin.getSelectedItem()),
+								station_query.get_station_symbol((String)setDestination.getSelectedItem()),"MOR",
+								"M"
+						);
+						allStationModel.clear();
+						for (Train i : avail_train) {
+							String temp = String.format("%d\t\t%s\t\t%s\t\t%s\t\t%s\n",
+									i.getTrain_id(), i.getStart_station(), i.getEnd_station(), i.getTime_of_day(),
+									i.getTravel_date());
+
+							allStationModel.addElement(temp);
+						}
+						revalidate();
+						repaint();
+					}
+				}
+		);
+		add(btnSearch);
 
 	}
 }
