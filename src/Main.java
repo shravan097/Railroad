@@ -1,13 +1,10 @@
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.JFrame;
 
 public class Main {
 
     public static void main(String[] args) {
 
-		ReservationQueries reservation = new ReservationQueries();
+		ReservationQuery reservation = new ReservationQuery();
 		reservation.make_reservation("Johnathon","Smith",9,"Visa",
 				"4880090989788876","425 Hollywood Blvd Los Angeles,CA");
 
