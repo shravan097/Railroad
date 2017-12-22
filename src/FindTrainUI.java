@@ -68,8 +68,9 @@ public class FindTrainUI extends JPanel {
 
 
 		JList avail_trains = new JList(allStationModel);
-		avail_trains.setBounds(248, 38, 232, 166);
-		add(avail_trains);
+		JScrollPane avail_train_scroll = new JScrollPane(avail_trains);
+		avail_train_scroll.setBounds(248, 38, 232, 166);
+		add(avail_train_scroll);
 		
 		JLabel lblNewLabel_1 = new JLabel("Available Trains");
 		lblNewLabel_1.setBounds(312, 17, 105, 16);
