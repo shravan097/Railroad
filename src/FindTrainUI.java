@@ -3,19 +3,8 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JLabel;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-eclipse.buildId=4.7.1.M20171009-0410
-java.version=9.0.1
-java.vendor=Oracle Corporation
-BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Jake/.eclipse_keyring
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Jake/.eclipse_keyring
 
-org.eclipse.core.resources
-Warning
-Fri Dec 22 12:44:21 EST 2017
-The project description file (.project) for 'RAILROAD' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
 
 public class FindTrainUI extends JPanel {
 
