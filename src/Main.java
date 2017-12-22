@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.List;
 
 public class Main {
@@ -15,9 +16,9 @@ public class Main {
         // TESTING
 //
 //    			testConnection test = new testConnection();
-//    		     GUI tp = new GUI();
-//    		        tp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//    		        tp.setVisible(true);
+    		     GUI tp = new GUI();
+    		        tp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    		        tp.setVisible(true);
     }
        
 }

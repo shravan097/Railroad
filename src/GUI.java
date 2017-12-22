@@ -1,16 +1,9 @@
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.JCheckBox;
-import javax.swing.JSpinner;
-import javax.swing.JList;
+import javax.swing.*;
 import java.awt.BorderLayout;
-import javax.swing.AbstractListModel;
-import javax.swing.JButton;
- 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+
 public class GUI extends JFrame {
 	public GUI() {
          
@@ -33,51 +26,93 @@ public class GUI extends JFrame {
         label1.setText("Look For Available Trains");
         jp1.setLayout(null);
         jp1.add(label1);
-        
+
+
+
+
+
+        // START STATION DROP DOWN BOX
         JLabel lblNewLabel = new JLabel("Select Starting Station");
         lblNewLabel.setBounds(88, 34, 153, 16);
         jp1.add(lblNewLabel);
         
         JComboBox comboBox = new JComboBox();
         comboBox.setBounds(88, 46, 382, 48);
+            List<Station> allStation = new StationQuery().getAllStation();
+            for (Station i : allStation)
+                    comboBox.addItem(i.getStation_name());
+
         jp1.add(comboBox);
-        
+        // END OF START STATION DROP DOWN BOX
+
+
+
+
+
+        // ENDING STATION DROP DOWN BOX
         JLabel lblSelectEndingStation = new JLabel("Select Ending Station");
         lblSelectEndingStation.setBounds(88, 92, 153, 16);
         jp1.add(lblSelectEndingStation);
-        
+
+
         JComboBox comboBox_1 = new JComboBox();
         comboBox_1.setBounds(88, 102, 382, 48);
+        for (Station i : allStation)
+                    comboBox_1.addItem(i.getStation_name());
         jp1.add(comboBox_1);
-        
+
+        // END OF ENDING STATION DROP DOWN BOX
+
+
+
+
+
+        // TRAVELERS OPTION.  MAXIMUM UP TO 10 PEOPLE
         JLabel lblSelectTravelers = new JLabel("Select Travelers");
         lblSelectTravelers.setBounds(88, 149, 153, 16);
         jp1.add(lblSelectTravelers);
         
         JComboBox comboBox_2 = new JComboBox();
         comboBox_2.setBounds(88, 159, 110, 48);
+        for( int i = 1; i< 11; ++i)
+                comboBox_2.addItem(i);
         jp1.add(comboBox_2);
+        // END OF TRAVELERS OPTION
+
+
+
         
         JCheckBox chckbxNewCheckBox = new JCheckBox("Book Roundtrip Fare");
         chckbxNewCheckBox.setBounds(225, 170, 197, 23);
         jp1.add(chckbxNewCheckBox);
-        
-        JLabel lblSelectDate = new JLabel("Select Date");
+
+        //START OF DATE OPTIONS
+        JLabel lblSelectDate = new JLabel("Select Date(YYYY-MM-DD)");
         lblSelectDate.setBounds(88, 205, 153, 16);
         jp1.add(lblSelectDate);
-        
-        JSpinner spinner = new JSpinner();
-        spinner.setBounds(98, 222, 34, 26);
+
+            SpinnerModel value = new SpinnerNumberModel(
+                    2017,2017,2018,1
+            );
+        JSpinner spinner = new JSpinner(value);
+        spinner.setBounds(98, 222, 94, 26);
         jp1.add(spinner);
-        
-        JSpinner spinner_1 = new JSpinner();
-        spinner_1.setBounds(139, 222, 34, 26);
+
+        value = new SpinnerNumberModel(1,1,12,1);
+        JSpinner spinner_1 = new JSpinner(value);
+        spinner_1.setBounds(199, 222, 64, 26);
         jp1.add(spinner_1);
-        
+
+        value = new SpinnerNumberModel(1,1,31,1);
         JSpinner spinner_2 = new JSpinner();
-        spinner_2.setBounds(174, 222, 34, 26);
+        spinner_2.setBounds(234, 222, 44, 26);
         jp1.add(spinner_2);
-        
+        //END OF DATE OPTION
+
+
+
+
+
         JList list = new JList();
         list.setModel(new AbstractListModel() {
         	String[] values = new String[] {"value1|time|duration|a|b|available seats [] | $$", "value1|time|duration|a|b|available seats [] | $$ ", "value1|time|duration|a|b|available seats [] | $$"};

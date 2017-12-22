@@ -5,9 +5,9 @@ import java.util.List;
 public class StationQuery {
 
     private static final String URL =
-            "jdbc:mariadb://134.74.126.107/F17336Gteam3";
-    private  static final String USERNAME = "F17336Gteam3";
-    private static final String PASSWORD = "metropark";
+            "jdbc:mariadb://localhost:3306/F17336Gteam3";
+    private  static final String USERNAME = "root";
+    private static final String PASSWORD = "";
 
     private Connection connection;
     private PreparedStatement selectAllStation;
@@ -21,8 +21,7 @@ public class StationQuery {
 
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
 
-           // selectAllStation =
-             //       connection.prepareStatement("SELECT * FROM stations");
+            selectAllStation =  connection.prepareStatement("SELECT * FROM stations");
         }
         catch (SQLException sqlException)
         {
