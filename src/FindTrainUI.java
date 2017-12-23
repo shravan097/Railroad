@@ -82,6 +82,22 @@ public class FindTrainUI extends JPanel {
 		
 		JButton btnClear = new JButton("Make Selection");
 		btnClear.setBounds(258, 216, 207, 29);
+
+
+
+
+		//Make Selection Handler
+		btnClear.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String train_id = (String)avail_trains.getSelectedValue();
+				int result = train_id.charAt((1));
+
+				System.out.println(result);
+				MainGUI.trainID = result;
+				MainGUI.jtp.setSelectedIndex(1);
+			}
+		});
 		add(btnClear);
 
 
@@ -91,9 +107,15 @@ public class FindTrainUI extends JPanel {
 				new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
+
+						if(lblSelectDate.getText()=="" || lblSelectDate.getText()==" " ) System.exit(1);
+						String converted_station1 = station_query.get_station_symbol((String)setOrigin.getSelectedItem());
+						String converted_station2 = station_query.get_station_symbol((String)setDestination.getSelectedItem());
+						MainGUI.startStation = converted_station1;
+						MainGUI.endStation = converted_station2;
 						List<Train> avail_train = trainQuery.getAllTrain(
-								date.getText(),station_query.get_station_symbol((String)setOrigin.getSelectedItem()),
-								station_query.get_station_symbol((String)setDestination.getSelectedItem()),"MOR",
+								date.getText(),converted_station1,
+								converted_station2,"MOR",
 								"M"
 						);
 						allStationModel.clear();
