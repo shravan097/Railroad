@@ -5,10 +5,11 @@ import javax.swing.*;
 
 public class MainGUI extends JFrame {
 	static JTabbedPane jtp = new JTabbedPane();
-	static int trainID;
-	static String startStation;
-	static String endStation;
+	public   static Train selectedTrain;
+	public static String selectedTrainString;
 	public MainGUI() {
+		selectedTrain= new Train(-1,null,null,null,"MOR",-1,-1);
+
 		setTitle("Tabbed Pane");
 		setSize(573,514);
 

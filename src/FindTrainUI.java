@@ -91,10 +91,9 @@ public class FindTrainUI extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String train_id = (String)avail_trains.getSelectedValue();
-				int result = train_id.charAt((1));
-
-				System.out.println(result);
-				MainGUI.trainID = result;
+				MainGUI.selectedTrainString = train_id;
+				String [] selected = train_id.split("[\t]");
+				MainGUI.selectedTrain.setTrain_id(Integer.parseInt(selected[0]));
 				MainGUI.jtp.setSelectedIndex(1);
 			}
 		});
@@ -111,8 +110,9 @@ public class FindTrainUI extends JPanel {
 						if(lblSelectDate.getText()=="" || lblSelectDate.getText()==" " ) System.exit(1);
 						String converted_station1 = station_query.get_station_symbol((String)setOrigin.getSelectedItem());
 						String converted_station2 = station_query.get_station_symbol((String)setDestination.getSelectedItem());
-						MainGUI.startStation = converted_station1;
-						MainGUI.endStation = converted_station2;
+						MainGUI.selectedTrain.setStart_station(converted_station1);
+						MainGUI.selectedTrain.setEnd_station(converted_station2);
+						MainGUI.selectedTrain.setTime_of_day("MOR");
 						List<Train> avail_train = trainQuery.getAllTrain(
 								date.getText(),converted_station1,
 								converted_station2,"MOR",
@@ -120,7 +120,7 @@ public class FindTrainUI extends JPanel {
 						);
 						allStationModel.clear();
 						for (Train i : avail_train) {
-							String temp = String.format("%d\t\t%s\t\t%s\t\t%s\t\t%s\n",
+							String temp = String.format("%d\t%s\t%s\t%s\t%s\n",
 									i.getTrain_id(), i.getStart_station(), i.getEnd_station(), i.getTime_of_day(),
 									i.getTravel_date());
 

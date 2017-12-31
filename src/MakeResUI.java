@@ -11,6 +11,7 @@ public class MakeResUI extends JPanel {
 	private JTextField txtCC;
 	private JTextField txtZip;
 
+
 	/**
 	 * Create the panel.
 	 */
@@ -95,6 +96,7 @@ public class MakeResUI extends JPanel {
 		//DISPLAY TICKET INFORMATION HERE INCLUDING SEAT ASSIGNMENT
 		JTextPane textPane = new JTextPane();
 		textPane.setBounds(234, 55, 303, 219);
+		textPane.setText(MainGUI.selectedTrainString);
 		add(textPane);
 		
 		JLabel lblTripInformation = new JLabel("Trip Information");
