@@ -8,8 +8,11 @@ public class MakeResUI extends JPanel {
 	private JTextField txtLastName;
 	private JTextField txtPassword;
 	private JTextField txtCity;
-	private JTextField txtCC;
+	private  JTextField txtCC;
 	private JTextField txtZip;
+	public static JTextPane  textPane;
+
+	private ReservationQuery reserve;
 
 
 	/**
@@ -17,6 +20,7 @@ public class MakeResUI extends JPanel {
 	 */
 	public MakeResUI() {
 		setLayout(null);
+		reserve = new ReservationQuery();
 		
 		// PASSENGER INFORMATION
 		JLabel lblEnterPassengerInf = new JLabel("Enter Passenger Info:");
@@ -94,7 +98,7 @@ public class MakeResUI extends JPanel {
 		txtCC.setColumns(10);
 		
 		//DISPLAY TICKET INFORMATION HERE INCLUDING SEAT ASSIGNMENT
-		JTextPane textPane = new JTextPane();
+		textPane = new JTextPane();
 		textPane.setBounds(234, 55, 303, 219);
 		textPane.setText(MainGUI.selectedTrainString);
 		add(textPane);
@@ -107,6 +111,8 @@ public class MakeResUI extends JPanel {
 		JButton btnConfirm = new JButton("Confirm Reservation");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+
 				JOptionPane.showMessageDialog(null, "RESERVATION CONFIRMED!");
 			}
 		});

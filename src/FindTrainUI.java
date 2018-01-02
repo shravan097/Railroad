@@ -94,6 +94,8 @@ public class FindTrainUI extends JPanel {
 				MainGUI.selectedTrainString = train_id;
 				String [] selected = train_id.split("[\t]");
 				MainGUI.selectedTrain.setTrain_id(Integer.parseInt(selected[0]));
+				String resString = String.format("Train ID:\t\t\t%s\nStart Station:\t\t\t%s\nEnd Station:\t\t\t%s\n Date:\t\t\t%s\n",selected[0],selected[1],selected[2],selected[4]);
+				if(MakeResUI.textPane != null) MakeResUI.textPane.setText(resString);
 				MainGUI.jtp.setSelectedIndex(1);
 			}
 		});
