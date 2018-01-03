@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 public class MakeResUI extends JPanel {
 	private JTextField txtFirstName;
 	private JTextField txtLastName;
-	private JTextField txtPassword;
+	private JTextField txtStreet;
 	private JTextField txtCity;
 	private  JTextField txtCC;
 	private JTextField txtZip;
@@ -42,11 +42,11 @@ public class MakeResUI extends JPanel {
 		add(txtLastName);
 		
 		//STREET
-		txtPassword = new JTextField();
-		txtPassword.setText("STREET");
-		txtPassword.setColumns(10);
-		txtPassword.setBounds(17, 115, 205, 26);
-		add(txtPassword);
+		txtStreet = new JTextField();
+		txtStreet.setText("STREET");
+		txtStreet.setColumns(10);
+		txtStreet.setBounds(17, 115, 205, 26);
+		add(txtStreet);
 		
 		//CITY
 		txtCity = new JTextField();
@@ -102,17 +102,18 @@ public class MakeResUI extends JPanel {
 		textPane.setBounds(234, 55, 303, 219);
 		textPane.setText(MainGUI.selectedTrainString);
 		add(textPane);
-		
+
 		JLabel lblTripInformation = new JLabel("Trip Information");
 		lblTripInformation.setBounds(336, 26, 107, 16);
 		add(lblTripInformation);
-		
+
 		//Confirm Reservation-- displays dialog box with seat assignments
 		JButton btnConfirm = new JButton("Confirm Reservation");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
+				reserve.make_reservation(txtFirstName.getText(),txtLastName.getText(),MainGUI.selectedTrain.getTrain_id(),
+						cards[selectCredit.getSelectedIndex()],txtCC.getText(),
+						String.format("%s %s %s\n", txtStreet.getText(),states[selectState.getSelectedIndex()],txtZip.getText()));
 				JOptionPane.showMessageDialog(null, "RESERVATION CONFIRMED!");
 			}
 		});
