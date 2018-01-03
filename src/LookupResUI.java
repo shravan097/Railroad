@@ -7,6 +7,7 @@ public class LookupResUI extends JPanel {
 	private JTextField txtPassengerID;
 	private JTextField txtReservationID;
 
+
 	/**
 	 * Create the panel.
 	 */
@@ -44,7 +45,8 @@ public class LookupResUI extends JPanel {
 		add(lblFoundResults);
 		
 		//RESULTS PULLED FROM DATABASE
-		JList results = new JList();
+		DefaultListModel<String> myList = new DefaultListModel<>();
+		JList results = new JList(myList);
 		results.setBounds(234, 56, 267, 233);
 		add(results);
 		
@@ -53,6 +55,38 @@ public class LookupResUI extends JPanel {
 		//SEARCH BUTTON
 		JButton btnSearch = new JButton("Search");
 		btnSearch.setBounds(24, 184, 187, 29);
+		btnSearch.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ReservationQuery rq = new ReservationQuery();
+				System.out.println(txtPassengerID.getText());
+				if(!(txtPassengerID.getText().isEmpty()) && txtReservationID.getText().isEmpty())
+				{
+					Reservation i  = rq.getReservationByPerson_Id(Integer.parseInt(txtPassengerID.getText()));
+					myList.clear();
+					myList.addElement(String.format("Reservation ID: %d",i.getReservation_id()));
+					myList.addElement(String.format("Reservation Date: %s",i.getReservation_date()));
+					myList.addElement(String.format("Passenger ID: %d",i.getPaying_passenger_id()));
+
+					revalidate();
+					repaint();
+
+				}
+
+				if(txtPassengerID.getText().isEmpty() && !(txtReservationID.getText().isEmpty()))
+				{
+
+					Reservation i  = rq.getReservationByReservation_Id(Integer.parseInt(txtReservationID.getText()));
+					myList.clear();
+					myList.addElement(String.format("Reservation ID: %d",i.getReservation_id()));
+					myList.addElement(String.format("Reservation Date: %s",i.getReservation_date()));
+					myList.addElement(String.format("Passenger ID: %d",i.getPaying_passenger_id()));
+					revalidate();
+					repaint();
+
+				}
+			}
+		});
 		add(btnSearch);
 		
 		//CHANGE RESERVATION BUTTON
