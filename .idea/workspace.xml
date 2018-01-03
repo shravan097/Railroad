@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb8a1476-43c2-47f6-8394-3c59d7b9c5e9" name="Default" comment="Train Query Attempt">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FindTrainUI.java" afterPath="$PROJECT_DIR$/src/FindTrainUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MakeResUI.java" afterPath="$PROJECT_DIR$/src/MakeResUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,18 +17,18 @@
       <file leaf-file-name="ReservationQuery.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ReservationQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+            <state relative-caret-position="132">
+              <caret line="77" column="17" lean-forward="false" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
               <folding>
-                <marker date="1515004027000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
-                <marker date="1515004027000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
-                <marker date="1515004027000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
-                <marker date="1515004027000" expanded="true" signature="1672:1709" ph="Update avail... " />
-                <marker date="1515004027000" expanded="true" signature="1813:1866" ph="UPDATE avail... " />
-                <marker date="1515004027000" expanded="true" signature="2579:2602" ph="UPDATE reser... " />
-                <marker date="1515004027000" expanded="true" signature="2579:2642" ph="UPDATE reser... " />
-                <marker date="1515004027000" expanded="true" signature="2579:2662" ph="UPDATE reser... " />
-                <marker date="1515004027000" expanded="true" signature="2579:2666" ph="UPDATE reser... " />
+                <marker date="1515004420000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
+                <marker date="1515004420000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
+                <marker date="1515004420000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
+                <marker date="1515004420000" expanded="true" signature="1671:1708" ph="Update avail... " />
+                <marker date="1515004420000" expanded="true" signature="1812:1865" ph="UPDATE avail... " />
+                <marker date="1515004420000" expanded="true" signature="2578:2601" ph="UPDATE reser... " />
+                <marker date="1515004420000" expanded="true" signature="2578:2641" ph="UPDATE reser... " />
+                <marker date="1515004420000" expanded="true" signature="2578:2661" ph="UPDATE reser... " />
+                <marker date="1515004420000" expanded="true" signature="2578:2665" ph="UPDATE reser... " />
               </folding>
             </state>
           </provider>
@@ -84,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindTrainUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FindTrainUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FindTrainUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="125" column="91" lean-forward="true" selection-start-line="125" selection-start-column="91" selection-end-line="125" selection-end-column="91" />
+            <state relative-caret-position="80">
+              <caret line="114" column="83" lean-forward="true" selection-start-line="114" selection-start-column="83" selection-end-line="114" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakeResUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MakeResUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MakeResUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="115" column="130" lean-forward="false" selection-start-line="115" selection-start-column="130" selection-end-line="115" selection-end-column="130" />
+            <state relative-caret-position="203">
+              <caret line="119" column="53" lean-forward="true" selection-start-line="119" selection-start-column="53" selection-end-line="119" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -185,8 +183,8 @@
         <option value="$PROJECT_DIR$/src/StationQuery.java" />
         <option value="$PROJECT_DIR$/src/MainGUI.java" />
         <option value="$PROJECT_DIR$/src/FindTrainUI.java" />
-        <option value="$PROJECT_DIR$/src/MakeResUI.java" />
         <option value="$PROJECT_DIR$/src/ReservationQuery.java" />
+        <option value="$PROJECT_DIR$/src/MakeResUI.java" />
       </list>
     </option>
   </component>
@@ -361,12 +359,12 @@
       <workItem from="1513993545228" duration="1141000" />
       <workItem from="1514695026299" duration="1781000" />
       <workItem from="1514900083051" duration="4069000" />
-      <workItem from="1514954021111" duration="1373000" />
+      <workItem from="1514954021111" duration="1805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40677000" />
+    <option name="totallyTimeSpent" value="41109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1319" height="757" extended-state="0" />
@@ -381,7 +379,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20090635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20090635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -469,15 +467,15 @@
         <state relative-caret-position="-1018">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="46" />
           <folding>
-            <marker date="1515004027000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
-            <marker date="1515004027000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
-            <marker date="1515004027000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
-            <marker date="1515004027000" expanded="true" signature="1672:1709" ph="Update avail... " />
-            <marker date="1515004027000" expanded="true" signature="1813:1866" ph="UPDATE avail... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2602" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2642" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2662" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2666" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
+            <marker date="1515004420000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
+            <marker date="1515004420000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
+            <marker date="1515004420000" expanded="true" signature="1671:1708" ph="Update avail... " />
+            <marker date="1515004420000" expanded="true" signature="1812:1865" ph="UPDATE avail... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2601" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2641" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2661" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2665" ph="UPDATE reser... " />
           </folding>
         </state>
       </provider>
@@ -550,15 +548,15 @@
         <state relative-caret-position="765">
           <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
           <folding>
-            <marker date="1515004027000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
-            <marker date="1515004027000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
-            <marker date="1515004027000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
-            <marker date="1515004027000" expanded="true" signature="1672:1709" ph="Update avail... " />
-            <marker date="1515004027000" expanded="true" signature="1813:1866" ph="UPDATE avail... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2602" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2642" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2662" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2666" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
+            <marker date="1515004420000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
+            <marker date="1515004420000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
+            <marker date="1515004420000" expanded="true" signature="1671:1708" ph="Update avail... " />
+            <marker date="1515004420000" expanded="true" signature="1812:1865" ph="UPDATE avail... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2601" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2641" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2661" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2665" ph="UPDATE reser... " />
           </folding>
         </state>
       </provider>
@@ -682,6 +680,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1513958420000" expanded="true" signature="852:904" ph="Update passe... " />
+            <marker date="1513958420000" expanded="true" signature="976:1031" ph="Update passe... " />
+            <marker date="1513958420000" expanded="true" signature="1110:1178" ph="Update passe... " />
+            <marker date="1513958420000" expanded="true" signature="1258:1330" ph="Update passe... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -814,32 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MakeResUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="115" column="130" lean-forward="false" selection-start-line="115" selection-start-column="130" selection-end-line="115" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReservationQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="68" column="63" lean-forward="false" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
-          <folding>
-            <marker date="1515004027000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
-            <marker date="1515004027000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
-            <marker date="1515004027000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
-            <marker date="1515004027000" expanded="true" signature="1672:1709" ph="Update avail... " />
-            <marker date="1515004027000" expanded="true" signature="1813:1866" ph="UPDATE avail... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2602" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2642" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2662" ph="UPDATE reser... " />
-            <marker date="1515004027000" expanded="true" signature="2579:2666" ph="UPDATE reser... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -850,11 +829,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FindTrainUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="125" column="91" lean-forward="true" selection-start-line="125" selection-start-column="91" selection-end-line="125" selection-end-column="91" />
+        <state relative-caret-position="80">
+          <caret line="114" column="83" lean-forward="true" selection-start-line="114" selection-start-column="83" selection-end-line="114" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReservationQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="77" column="17" lean-forward="false" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+          <folding>
+            <marker date="1515004420000" expanded="true" signature="761:787" ph="SELECT * FRO... reservations" />
+            <marker date="1515004420000" expanded="true" signature="878:932" ph="Select * fro... reservations" />
+            <marker date="1515004420000" expanded="true" signature="1043:1094" ph="Select * fro... reservations" />
+            <marker date="1515004420000" expanded="true" signature="1671:1708" ph="Update avail... " />
+            <marker date="1515004420000" expanded="true" signature="1812:1865" ph="UPDATE avail... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2601" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2641" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2661" ph="UPDATE reser... " />
+            <marker date="1515004420000" expanded="true" signature="2578:2665" ph="UPDATE reser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MakeResUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="119" column="53" lean-forward="true" selection-start-line="119" selection-start-column="53" selection-end-line="119" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>

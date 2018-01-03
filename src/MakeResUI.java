@@ -1,3 +1,5 @@
+import com.sun.codemodel.internal.JOp;
+
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -111,10 +113,18 @@ public class MakeResUI extends JPanel {
 		JButton btnConfirm = new JButton("Confirm Reservation");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				reserve.make_reservation(txtFirstName.getText(),txtLastName.getText(),MainGUI.selectedTrain.getTrain_id(),
-						cards[selectCredit.getSelectedIndex()],txtCC.getText(),
-						String.format("%s %s %s\n", txtStreet.getText(),states[selectState.getSelectedIndex()],txtZip.getText()));
-				JOptionPane.showMessageDialog(null, "RESERVATION CONFIRMED!");
+				try {
+					int j = reserve.make_reservation(txtFirstName.getText(), txtLastName.getText(), MainGUI.selectedTrain.getTrain_id(),
+							cards[selectCredit.getSelectedIndex()], txtCC.getText(),
+							String.format("%s %s %s\n", txtStreet.getText(), states[selectState.getSelectedIndex()], txtZip.getText()));
+					if( j==-1) throw new Exception();
+					JOptionPane.showMessageDialog(null, String.format("RESERVATION CONFIRMED!\n Reservation Confirmation Number: %d\n",j));
+				}
+				catch (Exception ex)
+				{
+					JOptionPane.showMessageDialog(null, "Sorry! Something Went Wrong. Try Again!");
+					ex.printStackTrace();
+				}
 			}
 		});
 		btnConfirm.setBounds(244, 296, 293, 29);
