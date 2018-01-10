@@ -8,9 +8,9 @@ import java.util.List;
     public class testConnection {
 
         private static final String URL =
-                "jdbc:mysql://134.74.126.107/F17336Gteam3";
-        private  static final String USERNAME = "F17336Gteam3";
-        private static final String PASSWORD = "metropark";
+                "jdbc:mysql://localhost/F17336Gteam3";
+        private  static final String USERNAME = "root";
+        private static final String PASSWORD = "";
 
         private Connection connection;
         private PreparedStatement selectAllStation;
